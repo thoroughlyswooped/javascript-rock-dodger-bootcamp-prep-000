@@ -103,7 +103,7 @@ function createRock(x) {
       if (top < 400) {
         // movement
         console.log("rock fall");
-        top = `${top -= 2}px`
+        top = `${top += 2}px`
         window.requestAnimationFrame(step);
       } else {
         rock.remove();
