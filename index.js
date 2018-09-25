@@ -145,9 +145,11 @@ function moveDodger(e) {
   // implement me!
   if (e.which === LEFT_ARROW) {
     moveDodgerLeft(DODGER);
+    console.log("move left");
   }
   if (e.which === RIGHT_ARROW) {
     moveDodgerRight(DODGER);
+    console.log("move right");
   }
   /**
    * This function should call `moveDodgerLeft()`
