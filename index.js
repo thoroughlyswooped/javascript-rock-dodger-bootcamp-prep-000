@@ -135,7 +135,9 @@ function createRock(x) {
  */
 function endGame() {
   clearInterval(gameInterval);
-  ROCKS.remove();
+  for (var i = 0; i < ROCKS.length; i++){
+    ROCKS[i].remove();
+  }
   moveDodger.remove();
   alert("YOU LOSE!");
   
