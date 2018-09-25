@@ -3,6 +3,7 @@
  */
 const DODGER = document.getElementById('dodger');
 const GAME = document.getElementById('game');
+const GAME_WIDTH = 400;
 const GAME_HEIGHT = 400;
 const LEFT_ARROW = 37; // use e.which!;
 const RIGHT_ARROW = 39; // use e.which!;
