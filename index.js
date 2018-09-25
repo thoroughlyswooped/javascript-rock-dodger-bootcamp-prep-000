@@ -104,7 +104,7 @@ function createRock(x) {
         // movement
         console.log("rock fall");
         top = `${top += 2}px`
-        window.reqestAnimationFrame(step);
+        window.requestAnimationFrame(step);
       } else {
         rock.remove();
       }
