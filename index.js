@@ -18,6 +18,7 @@ var gameInterval = null;
  */
  
 function checkCollision(rock) {
+  console.log("has been called");
   // implement me!
   // use the comments below to guide you!
   const top = positionToInteger(rock.style.top);
@@ -92,7 +93,6 @@ function createRock(x) {
      * If a rock collides with the DODGER,
      * we should call endGame()
      */
-     console.log("call checkCollision");
      if (checkCollision(rock)) {
        console.log("end game")
        endGame();
