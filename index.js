@@ -143,6 +143,7 @@ function endGame() {
   
 }
 function moveDodger(e) {
+  console.log(DODGER.style.left);
   // implement me!
   console.log("moveDodger ran!")
   if (e.which === LEFT_ARROW) {
@@ -162,11 +163,11 @@ function moveDodger(e) {
    */
 }
 
-function moveDodgerLeft() {
+function moveDodgerLeft(d) {
   // implement me!
-  var left = DODGER.style.left;
+  var left = d.style.left;
   function move() {
-    DODGER.style.left = `${right -= 4}px`;
+    d.style.left = `${right -= 4}px`;
     if (left >= 0){
       window.requestAnimationFrame(move);
     }
