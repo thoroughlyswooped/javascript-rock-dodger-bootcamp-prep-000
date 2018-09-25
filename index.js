@@ -135,12 +135,11 @@ function createRock(x) {
  */
 function endGame() {
   clearInterval(gameInterval);
-  for (var i = 0; i < rocks.length; i++) {
+  for (var i = 0; i < ROCKS.length; i++) {
     rocks[i].remove();
   }
   
 }
-
 function moveDodger(e) {
   // implement me!
   console.log("moveDodger ran!")
