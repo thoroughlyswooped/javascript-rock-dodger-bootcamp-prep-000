@@ -18,7 +18,6 @@ var gameInterval = null;
  */
  
 function checkCollision(rock) {
-  console.log("has been called");
   // implement me!
   // use the comments below to guide you!
   const top = positionToInteger(rock.style.top);
@@ -27,8 +26,7 @@ function checkCollision(rock) {
   // DODGER is 20px high
   // GAME_HEIGHT - 20 - 20 = 360px;
   console.log(top);
-  if (top > 0) {
-    console.log("testing collision");
+  if (top > 360) {
     const dodgerLeftEdge = positionToInteger(DODGER.style.left);
 
     // FIXME: The DODGER is 40 pixels wide -- how do we get the right edge?
