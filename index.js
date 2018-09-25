@@ -162,7 +162,7 @@ function moveDodger(e) {
 
 function moveDodgerLeft() {
   // implement me!
-  var left = positionToInterger(DODGER.style.left);
+  var left = positionToInteger(DODGER.style.left);
   DODGER.style.left = `${left -= 4}px`;
   if (left >= 0){
     console.log("move left");
@@ -177,7 +177,7 @@ function moveDodgerLeft() {
 
 function moveDodgerRight() {
   // implement me!
-  var left = positionToInterger(DODGER.style.left);
+  var left = positionToInteger(DODGER.style.left);
   function move () {
     DODGER.style.left = `${left += 4}px`;
     if (left <= 360){
