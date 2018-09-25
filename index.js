@@ -180,9 +180,9 @@ function moveDodgerLeft() {
    */
 }
 
-function moveDodgerRight(DODGER) {
+function moveDodgerRight(d) {
   // implement me!
-  var right = DODGER.style.right;
+  var right = d.style.right;
   DODGER.style.right = `${right += 4}px`;
   if (right <= 360){
     window.requestAnimationFrame(moveDodgerRight);
