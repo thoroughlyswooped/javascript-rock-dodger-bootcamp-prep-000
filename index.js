@@ -100,7 +100,7 @@ function createRock(x) {
      * the GAME, we want to move it again.
      */
      function step() {
-     if (positionToInterger(rock.style.bottom) > 0) {
+     if (positionToInterger(rock.style.bottom) > 360) {
        // movement
        console.log("rock fall");
        rock.style.bottom = `${(positionToInterger(rock.style.bottom) - 2)}px`;
