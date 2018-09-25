@@ -117,7 +117,7 @@ function createRock(x) {
 
   // We should kick off the animation of the rock around here
   
-  window.requestAnimationFrame(step());
+  window.requestAnimationFrame(step);
 
   // Add the rock to ROCKS so that we can remove all rocks
   // when there's a collision
@@ -143,6 +143,12 @@ function endGame() {
 
 function moveDodger(e) {
   // implement me!
+  if (e.which === LEFT_ARROW) {
+    moveDodgerLeft(DODGER);
+  }
+  if (e.which === RIGHT_ARROW) {
+    moveDodgerRight(DODGER);
+  }
   /**
    * This function should call `moveDodgerLeft()`
    * if the left arrow is pressed and `moveDodgerRight()`
@@ -154,14 +160,33 @@ function moveDodger(e) {
 
 function moveDodgerLeft() {
   // implement me!
+  var right = DODGER.style.right;
+  function move() {
+    DODGER.style.right = `${right -= 4}px`;
+    if (right >= 0){
+      window.requestAnimationFrame(move);
+    }
+  }
+  
+  window.requestAnimationFrame(move);
+  
   /**
    * This function should move DODGER to the left
    * (mabye 4 pixels?). Use window.requestAnimationFrame()!
    */
 }
 
-function moveDodgerRight() {
+function moveDodgerRight(DODGER) {
   // implement me!
+  var right = DODGER.style.right;
+  function move() {
+    DODGER.style.right = `${right += 4}px`;
+    if (right <= 360){
+      window.requestAnimationFrame(move);
+    }
+  }
+  
+  window.requestAnimationFrame(move);
   /**
    * This function should move DODGER to the right
    * (mabye 4 pixels?). Use window.requestAnimationFrame()!
