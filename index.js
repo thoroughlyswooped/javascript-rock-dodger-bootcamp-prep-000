@@ -92,6 +92,7 @@ function createRock(x) {
      * If a rock collides with the DODGER,
      * we should call endGame()
      */
+     console.log("call checkCollision");
      if (checkCollision(rock)) {
        console.log("end game")
        endGame();
