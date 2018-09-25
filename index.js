@@ -146,10 +146,12 @@ function moveDodger(e) {
   // implement me!
   if (e.which === LEFT_ARROW) {
     e.preventDefault();
+    e.StopProp;
     moveDodgerLeft();
   }
   if (e.which === RIGHT_ARROW) {
     e.preventDefault();
+    e.stopProp;
     moveDodgerRight();
   }
   /**
