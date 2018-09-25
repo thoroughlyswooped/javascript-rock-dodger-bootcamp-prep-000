@@ -177,6 +177,7 @@ function moveDodgerLeft() {
 function moveDodgerRight() {
   // implement me!
   var left = positionToInteger(DODGER.style.left);
+  console.log("pls run this");
   function move () {
     DODGER.style.left = `${left += 4}px`;
     console.log(left);
