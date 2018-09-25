@@ -100,13 +100,13 @@ function createRock(x) {
      * the GAME, we want to move it again.
      */
      function step() {
-      if (top < 400) {
+      if (top <= 400) {
         // movement
         console.log("rock fall");
-        top = `${top += 2}px`
+        top = `${top -= 2}px`
         window.requestAnimationFrame(step);
       } else {
-        //rock.remove();
+        rock.remove();
       }
      }
 
