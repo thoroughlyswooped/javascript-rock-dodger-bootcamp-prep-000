@@ -106,7 +106,7 @@ function createRock(x) {
         top = `${top += 2}px`
         window.requestAnimationFrame(step);
       } else {
-        rock.remove();
+        //rock.remove();
       }
      }
 
