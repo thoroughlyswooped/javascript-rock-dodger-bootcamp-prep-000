@@ -103,7 +103,7 @@ function createRock(x) {
      if (positionToInterger(rock.style.bottom) > 360) {
        // movement
        console.log("rock fall");
-       rock.style.bottom = `${(positionToInterger(rock.style.bottom) += 2)}px`;
+       rock.style.bottom = `${(positionToInterger(rock.style.bottom) + 2)}px`;
        window.reqestAnimationFrame(step);
      } else {
        rock.remove();
