@@ -100,14 +100,14 @@ function createRock(x) {
      * the GAME, we want to move it again.
      */
      function step() {
-     if (top < 400) {
-       // movement
-       console.log("rock fall");
-       rock.style.bottom = `${(positionToInterger(rock.style.bottom) + 2)}px`;
-       window.reqestAnimationFrame(step);
-     } else {
-       rock.remove();
-     }
+      if (top < 400) {
+        // movement
+        console.log("rock fall");
+        top = `${top += 2}px`
+        window.reqestAnimationFrame(step);
+      } else {
+        rock.remove();
+      }
      }
 
     /**
