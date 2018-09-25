@@ -181,10 +181,10 @@ function moveDodgerLeft() {
 function moveDodgerRight() {
   // implement me!
   var left = positionToInteger(DODGER.style.left);
-  DODGER.style.left = `${left += 4}px`;
+  //DODGER.style.left = `${left += 4}px`;
   console.log(left);
   if (left < 360){
-    console.log('move right');
+    DODGER.style.left = `${left += 4}px`;
     window.requestAnimationFrame(moveDodgerRight);
   }
   
