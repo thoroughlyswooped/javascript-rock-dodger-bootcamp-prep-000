@@ -26,7 +26,7 @@ function checkCollision(rock) {
   // rocks are 20px high
   // DODGER is 20px high
   // GAME_HEIGHT - 20 - 20 = 360px;
-  if (top > 360) {
+  if (top > 0) {
     console.log("testing collision");
     const dodgerLeftEdge = positionToInteger(DODGER.style.left);
 
@@ -108,7 +108,6 @@ function createRock(x) {
         rock.style.top = `${top += 2}px`
         window.requestAnimationFrame(step);
       } else {
-        console.log("destroy rock");
         rock.remove();
       }
      }
