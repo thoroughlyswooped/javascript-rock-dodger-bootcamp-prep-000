@@ -147,11 +147,11 @@ function moveDodger(e) {
   // implement me!
   console.log("moveDodger ran!")
   if (e.which === LEFT_ARROW) {
-    moveDodgerLeft(DODGER);
+    moveDodgerLeft();
     console.log("move left");
   }
   if (e.which === RIGHT_ARROW) {
-    moveDodgerRight(DODGER);
+    moveDodgerRight();
     console.log("move right");
   }
   /**
@@ -163,11 +163,11 @@ function moveDodger(e) {
    */
 }
 
-function moveDodgerLeft(d) {
+function moveDodgerLeft() {
   // implement me!
-  var left = d.style.left;
+  var left = DODGER.style.left;
   function move() {
-    d.style.left = `${left -= 4}px`;
+    DODGER.style.left = `${left -= 4}px`;
     if (left >= 0){
       window.requestAnimationFrame(move);
     }
@@ -181,9 +181,9 @@ function moveDodgerLeft(d) {
    */
 }
 
-function moveDodgerRight(d) {
+function moveDodgerRight() {
   // implement me!
-  var left = d.style.left;
+  var left = DODGER.style.left;
   DODGER.style.left = `${left += 4}px`;
   if (left <= 360){
     window.requestAnimationFrame(moveDodgerRight);
