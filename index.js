@@ -167,7 +167,7 @@ function moveDodgerLeft() {
   // implement me!
   var left = positionToInteger(DODGER.style.left);
   DODGER.style.left = `${left -= 4}px`;
-  if (left >= 0){
+  if (left > 0){
     console.log("move left");
     window.requestAnimationFrame(moveDodgerLeft);
   }
@@ -183,7 +183,7 @@ function moveDodgerRight() {
   var left = positionToInteger(DODGER.style.left);
   DODGER.style.left = `${left += 4}px`;
   console.log(left);
-  if (left <= 360){
+  if (left < 360){
     console.log('move right');
     window.requestAnimationFrame(moveDodgerRight);
   }
