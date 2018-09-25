@@ -166,11 +166,9 @@ function moveDodger(e) {
 function moveDodgerLeft() {
   // implement me!
   var left = DODGER.style.left;
-  function move() {
-    DODGER.style.left = `${left -= 4}px`;
-    if (left >= 0){
-      window.requestAnimationFrame(move);
-    }
+  DODGER.style.left = `${left -= 4}px`;
+  if (left >= 0){
+    window.requestAnimationFrame(move);
   }
   
   window.requestAnimationFrame(move);
@@ -184,8 +182,8 @@ function moveDodgerLeft() {
 function moveDodgerRight() {
   // implement me!
   var left = DODGER.style.left;
-  DODGER.style.left = `${left += 4}px`;
   if (left <= 360){
+    DODGER.style.left = `${left += 4}px`;
     window.requestAnimationFrame(moveDodgerRight);
   }
   
