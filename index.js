@@ -143,7 +143,6 @@ function endGame() {
   
 }
 function moveDodger(e) {
-  console.log(DODGER.style.left);
   // implement me!
   if (e.which === LEFT_ARROW) {
     moveDodgerLeft();
@@ -180,6 +179,7 @@ function moveDodgerRight() {
   var left = positionToInteger(DODGER.style.left);
   function move () {
     DODGER.style.left = `${left += 4}px`;
+    console.log(left);
     if (left <= 360){
       console.log('move right');
       window.requestAnimationFrame(move);
@@ -200,7 +200,6 @@ function positionToInteger(p) {
 }
 
 function start() {
-  console.log("test");
   window.addEventListener('keydown', moveDodger);
 
   START.style.display = 'none';
